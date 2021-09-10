@@ -1,0 +1,26 @@
+git add --all-- ':!animation_output' ':!animation_output_audio_book' ':!animation_output_new' ':!animation_output_old' ':!training' ':!training_data' ':!training_ELU' ':!training_final_voca' ':!training_leakyRELU' ':!training_linear' ':!training_mfcc_elu' ':!training_scheduler_10-4' ':!training_works'
+
+python run_voca.py --tf_model_fname './training/torch_100_1300.pth'\
+ --ds_fname './ds_graph/output_graph.pb' \
+ --audio_fname './audio/test_sentence.wav'\
+ --template_fname './template/FLAME_sample.ply'\
+ --condition_idx 3 --out_path './animation_output_new'
+
+python run_voca.py --tf_model_fname './training/torch_100_39.pth'\
+ --ds_fname './ds_graph/output_graph.pb' \
+ --audio_fname './audio/test_sentence.wav'\
+ --template_fname './template/FLAME_sample.ply'\
+ --condition_idx 3 --out_path './animation_output_new'
+
+
+python run_voca.py --tf_model_fname './training/torch_100_1300.pth'\
+ --ds_fname './ds_graph/output_graph.pb' \
+ --audio_fname './audio/public-domain-book_dwn_sml.wav'\
+ --template_fname './template/FLAME_sample.ply'\
+ --condition_idx 3 --out_path './animation_output_new'
+
+python run_voca.py --tf_model_fname './training/torch_140_162.pth'\
+ --ds_fname './ds_graph/output_graph.pb' \
+ --audio_fname './audio/test_sentence.wav'\
+ --template_fname './template/FLAME_sample.ply'\
+ --condition_idx 3 --out_path './animation_output_new'

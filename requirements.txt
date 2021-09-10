@@ -1,0 +1,14 @@
+numpy
+scipy
+chumpy
+opencv-python
+resampy
+python-speech-features
+#tensorflow-gpu==1.15.2
+scikit-learn
+image
+ipython
+matplotlib
+trimesh
+pyrender
+
